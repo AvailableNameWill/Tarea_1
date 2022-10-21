@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Tarea_1</string>
     <string name="inicio"> Iniciar </string>
+    <string name="num1"> Numero 1 </string>
+    <string name="num2"> Numero 2 </string>
+    <string name="sum"> Suma </string>
+    <string name="res"> Resta </string>
+    <string name="mult"> Multiplicacion </string>
+    <string name="div"> Division </string>
 </resources>
