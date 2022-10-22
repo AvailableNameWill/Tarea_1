@@ -13,15 +13,14 @@ import com.example.tarea_1.clase.Operaciones;
 
 public class ActivityOperaciones extends AppCompatActivity {
 
-    EditText txtn1, txtn2;
-    Button btnSuma, btnResta, btnMult, btnDiv;
-    Operaciones op;
+    private EditText txtn1, txtn2;
+    private Button btnSuma, btnResta, btnMult, btnDiv;
+    public static final Operaciones op = new Operaciones();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operaciones);
-        op = new Operaciones();
         cargarObj();
 
         btnSuma.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +76,8 @@ public class ActivityOperaciones extends AppCompatActivity {
                 Toast.makeText(this, "El denominador no puede ser mayor que el numerador", Toast.LENGTH_SHORT).show();
                 return;
             }
-            else intent.putExtra("resultado", res);
+            //else intent.putExtra("resultado", res);
+            op.setRes(res);
             startActivity(intent);
         }catch (Exception e) {
             Toast.makeText(this, "Las cajas de texto no deben estar vacias", Toast.LENGTH_SHORT).show();

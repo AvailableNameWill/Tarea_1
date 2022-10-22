@@ -1,6 +1,7 @@
 package com.example.tarea_1.clase;
 
 public class Operaciones {
+
     private double res;
 
     public Operaciones(){}
