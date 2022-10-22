@@ -28,12 +28,6 @@ public class ActivityOperaciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operaciones(1);
-                /*Double n1 = Double.parseDouble(txtn1.getText().toString());
-                Double n2 = Double.parseDouble(txtn2.getText().toString());
-                Double res = op.suma(n1,n2);
-                Intent intent = new Intent(getApplicationContext(), ActivityResult.class);
-                intent.putExtra("resultado", res);
-                startActivity(intent);*/
             }
         });
 
@@ -41,12 +35,6 @@ public class ActivityOperaciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operaciones(2);
-                /*Double n1 = Double.parseDouble(txtn1.getText().toString());
-                Double n2 = Double.parseDouble(txtn2.getText().toString());
-                Double res = op.resta(n1,n2);
-                Intent intent = new Intent(getApplicationContext(), ActivityResult.class);
-                intent.putExtra("resultado", res);
-                startActivity(intent);*/
             }
         });
 
@@ -54,12 +42,6 @@ public class ActivityOperaciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operaciones(3);
-                /*Double n1 = Double.parseDouble(txtn1.getText().toString());
-                Double n2 = Double.parseDouble(txtn2.getText().toString());
-                Double res = op.multiplicacion(n1,n2);
-                Intent intent = new Intent(getApplicationContext(), ActivityResult.class);
-                intent.putExtra("resultado", res);
-                startActivity(intent);*/
             }
         });
 
@@ -67,13 +49,6 @@ public class ActivityOperaciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 operaciones(4);
-                /*Double n1 = Double.parseDouble(txtn1.getText().toString());
-                Double n2 = Double.parseDouble(txtn2.getText().toString());
-                Double res = op.division(n1,n2);
-                Intent intent = new Intent(getApplicationContext(), ActivityResult.class);
-                if(res==0) intent.putExtra("resultado", "El denominador no puede ser mayor que el numerador");
-                else intent.putExtra("resultado", res);
-                startActivity(intent);*/
             }
         });
     }
@@ -98,7 +73,7 @@ public class ActivityOperaciones extends AppCompatActivity {
             else if(tipoOpe == 4) res = op.division(n1,n2);
 
             Intent intent = new Intent(getApplicationContext(), ActivityResult.class);
-            if(res == 0 && tipoOpe == 4){
+            if(res < 0 && tipoOpe == 4){
                 Toast.makeText(this, "El denominador no puede ser mayor que el numerador", Toast.LENGTH_SHORT).show();
                 return;
             }

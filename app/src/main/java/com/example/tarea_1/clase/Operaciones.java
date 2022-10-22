@@ -25,10 +25,10 @@ public class Operaciones {
     }
 
     public double division(double n1, double n2){
-        if(n1 > n2){
+        if(n1 >= n2){
             res = n1 / n2;
             return res;
-        } else return res = 0;
+        } else return res = -1;
     }
 
     public double getRes() {
