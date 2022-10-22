@@ -7,4 +7,5 @@
     <string name="res"> Resta </string>
     <string name="mult"> Multiplicacion </string>
     <string name="div"> Division </string>
+    <string name="result"> Resultado </string>
 </resources>
